@@ -1,7 +1,5 @@
 import './assets/styles/global.sass';
 
-function App() {
+export function App() {
   return <div>Frontend DDD application example</div>;
 }
-
-export default App
