@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './presentation/App.tsx';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './application/router';
+import './presentation/assets/styles/global.sass';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
