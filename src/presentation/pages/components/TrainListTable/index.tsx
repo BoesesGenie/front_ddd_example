@@ -1,8 +1,6 @@
-import { useTrainsRepository } from '../../../../application/hooks/useTrainsRepository.ts';
+import { TrainListTableProps } from './types.ts';
 
-export function TrainListTable() {
-  const trains = useTrainsRepository();
-
+export function TrainListTable({ trains }: TrainListTableProps) {
   return (
     <table>
       <thead>
@@ -12,7 +10,7 @@ export function TrainListTable() {
         </tr>
       </thead>
       <tbody>
-        {trains.all().map((train) => (
+        {trains.map((train) => (
           <tr key={train.id}>
             <td>{train.name}</td>
             <td>{train.description}</td>

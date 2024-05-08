@@ -1,5 +1,5 @@
-import { TrainListTable } from '../components/TrainListTable';
+import { TrainEditor } from '../components/TrainEditor';
 
 export function TrainCharacteristics() {
-  return <TrainListTable />;
+  return <TrainEditor />;
 }
