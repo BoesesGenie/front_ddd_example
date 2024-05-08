@@ -1,4 +1,5 @@
 import { TrainListTableProps } from './types.ts';
+import { TrainListRow } from './components/TrainListRow';
 
 export function TrainListTable({ trains }: TrainListTableProps) {
   return (
@@ -11,10 +12,7 @@ export function TrainListTable({ trains }: TrainListTableProps) {
       </thead>
       <tbody>
         {trains.map((train) => (
-          <tr key={train.id}>
-            <td>{train.name}</td>
-            <td>{train.description}</td>
-          </tr>
+          <TrainListRow key={train.id} train={train} />
         ))}
       </tbody>
     </table>
